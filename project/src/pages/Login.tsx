@@ -95,6 +95,13 @@ function Login() {
             />
           </div>
 
+          <div className="bg-blue-100 border mb-4  border-blue-300 text-blue-800 rounded-xl p-4 max-w-md shadow-sm">
+            <h3 className="text-lg font-semibold mb-2">Test Account</h3>
+            <p className="text-sm">
+              <span className="font-medium">Email:</span> test@gmail.com <br />
+              <span className="font-medium">Password:</span> Test@1234
+            </p>
+          </div>
           {!loading ? (
             <button
               type="submit"
