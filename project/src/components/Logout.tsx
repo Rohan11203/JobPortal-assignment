@@ -1,4 +1,3 @@
-// components/LogoutModal.jsx
 import { useNavigate } from "react-router-dom";
 import { onLogout } from "../api";
 
@@ -11,7 +10,7 @@ const LogoutModal = ({ isOpen, onClose }: any) => {
 
       localStorage.removeItem("isAuth");
 
-      // Navigate to login
+
       navigate("/");
     } catch (error) {
       console.error("Logout failed", error);

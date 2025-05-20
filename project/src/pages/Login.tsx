@@ -4,6 +4,7 @@ import { LogIn } from "lucide-react";
 import { useStore } from "../store";
 import { dummyUsers } from "../data";
 import { onSignin } from "../api";
+import { ClipLoader } from "react-spinners";
 
 function Login() {
   const navigate = useNavigate();
@@ -94,12 +95,18 @@ function Login() {
             />
           </div>
 
-          <button
-            type="submit"
-            className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition"
-          >
-            Sign In
-          </button>
+          {!loading ? (
+            <button
+              type="submit"
+              className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition"
+            >
+              Sign In
+            </button>
+          ) : (
+            <div className="flex justify-center items-center">
+              <ClipLoader size={20} />
+            </div>
+          )}
         </form>
       </div>
     </div>

@@ -24,7 +24,6 @@ function Jobs() {
         setFullJobs(data);
         setJobs(data);
 
-        // Extract unique categories from full list
         const categoryArray = data.map((job: any) => job.category);
         const catSet: Set<string> = new Set(categoryArray.filter((cat:any): cat is string => typeof cat === 'string'));
         setCategories(Array.from(catSet));
