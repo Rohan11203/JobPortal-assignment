@@ -8,7 +8,7 @@ export function useFetchCurrentUser() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/v1/users/")
+      .get("https://jobportal-assignment.onrender.com/api/v1/users/")
       .then((res) => {
         setCurrentUser(res.data.response);
       })

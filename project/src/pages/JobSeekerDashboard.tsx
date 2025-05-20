@@ -17,9 +17,8 @@ export default function JobSeekerDashboard() {
   useEffect(() => {
     const fetchDashboard = async () => {
       try {
-        const token = localStorage.getItem('authToken');
-        const res = await axios.get('http://localhost:3000/api/v1/job/jobseeker/dashboard', {
-          headers: { Authorization: `Bearer ${token}` }
+        const res = await axios.get('https://jobportal-assignment.onrender.com/api/v1/job/jobseeker/dashboard',{
+          withCredentials: true
         });
         setStats({
           total: res.data.totalApplications,

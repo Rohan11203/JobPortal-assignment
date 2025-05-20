@@ -33,7 +33,7 @@ function JobDetails() {
 
   const handleApply = async () => {
     try {
-      await axios.post(`http://localhost:3000/api/v1/job/${id}/apply`);
+      await axios.post(`https://jobportal-assignment.onrender.com/api/v1/job/${id}/apply`);
       setApplyStatus("Application submitted successfully");
     } catch (err: any) {
       console.error("Apply error:", err);

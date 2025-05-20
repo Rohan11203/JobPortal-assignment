@@ -50,7 +50,7 @@ export default function EmployerDashboard() {
     const fetchDashboard = async () => {
       try {
         const res = await axios.get<DashboardData>(
-          "http://localhost:3000/api/v1/job/employer/dashboard"
+          "https://jobportal-assignment.onrender.com/api/v1/job/employer/dashboard"
         );
         setData(res.data);
       } catch (err: any) {
