@@ -13,7 +13,7 @@ function Navbar() {
     <nav className={`${isDarkMode ? 'dark bg-gray-800' : 'bg-white'} shadow-md`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className={`text-xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
+          <Link to="/" className={`text-xl pr-2 font-bold ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>
             JobPortal
           </Link>
           
